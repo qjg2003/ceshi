@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ceshi · GitHub 网页测试</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 20% 20%,#2d4b87,transparent 42%),linear-gradient(135deg,#0d1223,#172844);color:#f8fafc;padding:20px}
+.card{width:min(100%,520px);border:1px solid #ffffff35;border-radius:26px;padding:44px 35px;text-align:center;background:#ffffff12;box-shadow:0 24px 70px #0005;backdrop-filter:blur(12px)}
+.tag{display:inline-block;padding:7px 13px;background:#34d39922;border:1px solid #34d39955;color:#86efac;border-radius:99px;font-size:13px}
+h1{font-size:clamp(28px,6vw,40px);margin:24px 0 12px}p{color:#cbd5e1;line-height:1.8}.count{font-size:60px;font-weight:800;margin:26px 0 6px;font-variant-numeric:tabular-nums}
+button{cursor:pointer;background:#60a5fa;color:#071528;border:0;border-radius:14px;padding:14px 30px;font-weight:800;font-size:17px;transition:transform .15s,background .15s}button:hover{background:#93c5fd;transform:translateY(-2px)}button:active{transform:translateY(1px)}
+footer{margin-top:26px;font-size:13px;color:#94a3b8}
+</style>
+</head>
+<body>
+<main class="card">
+<div class="tag">✓ GitHub 连接测试</div>
+<h1>你好，网页运行成功！</h1>
+<p>这是 ChatGPT 为 <strong>qjg2003/ceshi</strong> 创建的第一个测试网页。<br>点击按钮，检查交互功能是否正常。</p>
+<div class="count" id="count">0</div>
+<button id="clickMe" type="button">点我 +1</button>
+<footer>纯 HTML + CSS + JavaScript · 无需安装依赖</footer>
+</main>
+<script>
+let count=0;
+document.getElementById("clickMe").addEventListener("click",()=>{
+document.getElementById("count").textContent=String(++count);
+});
+</script>
+</body></html>
